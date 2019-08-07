@@ -1,17 +1,18 @@
 <?php
 $variable = [];
+$type = [];
 if(is_bool($variable)) {
-    echo 'bool';
+    $type = 'bool';
 } elseif(is_float($variable)) {
-    echo 'float';
+    $type = 'float';
 } elseif(is_int($variable)) {
-    echo 'int';
+    $type = 'int';
 } elseif(is_string($variable)) {
-    echo 'string';
+    $type = 'string';
 } elseif(is_null($variable)) {
-    echo 'null';
+    $type = 'null';
 } else {
-    echo 'other';
+    $type = 'other';
 };
 ?>
 
@@ -25,5 +26,6 @@ if(is_bool($variable)) {
     </head>
     <body>
         <p><?=$variable?></p>
+        <p><?=$type?></p>
     </body>
 </html>
